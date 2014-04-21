@@ -6,7 +6,7 @@ Borrowed idea from this project, I write a new version of java auto-complete com
 
 There are two ways to use this auto-complete component:
 
-* use AutoCompleteJComboBox class
+###1. use AutoCompleteJComboBox class
 
 This class is derived from the JComboBox. If a auto-completed JComboBox wanted, this class can be directly replace the JComboBox with some extra initialization.
 ```java
@@ -31,7 +31,7 @@ frame.add( comboBox );
 ...
 ```
 
-* use JComboBoxAutoCompleteInitializer class
+###2. use JComboBoxAutoCompleteInitializer class
 
 The method 1 require you create a AutoCompleteJComboBox to replace existing JComboBox. But sometimes, the user does not want to use the auto-completed function in this way.
 
