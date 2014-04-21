@@ -6,10 +6,10 @@ Borrowed idea from this project, I write a new version of java auto-complete com
 
 There are two ways to use this auto-complete component:
 
-1) use AutoCompleteJComboBox class
+* use AutoCompleteJComboBox class
 
 This class is derived from the JComboBox. If a auto-completed JComboBox wanted, this class can be directly replace the JComboBox with some extra initialization.
-
+```java
 For example:
 
 //create a new AutoCompleteJComboBox
@@ -29,9 +29,9 @@ comboBox.init( new DefaultAutoCompleteTextFinder( autoCompleteTexts ));
  
 frame.add( comboBox );
 ...
+```
 
-
-2) use JComboBoxAutoCompleteInitializer class
+* use JComboBoxAutoCompleteInitializer class
 
 The method 1 require you create a AutoCompleteJComboBox to replace existing JComboBox. But sometimes, the user does not want to use the auto-completed function in this way.
 
@@ -39,6 +39,7 @@ We can use JComboBoxAutoCompleteInitializer to attach "auto-completed" function 
 
 For example:
 
+```java
 JFrame frame = ...
 
 JComboBox comboBox = new JComboBox();
@@ -55,3 +56,4 @@ ArrayList< String > autoCompleteTexts = new ArrayList< String >() {{
 JComboBoxAutoCompleteInitializer::init( comboBox, new DefaultAutoCompleteTextFinder( autoCompleteTexts ) );
  
 ...
+```
